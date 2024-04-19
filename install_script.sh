@@ -51,10 +51,10 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/$PWD/install/lib/pkgconfig/
 cd downloads
 
 #ZLIB
-wget --no-check-certificate https://zlib.net/zlib-1.2.11.tar.gz
-tar zxvf zlib-1.2.11.tar.gz
-rm zlib-1.2.11.tar.gz
-cd zlib-1.2.11
+wget --no-check-certificate https://zlib.net/zlib-1.3.1.tar.gz
+tar zxvf zlib-1.3.1.tar.gz
+rm zlib-1.3.1.tar.gz
+cd zlib-1.3.1
 ./configure --prefix=$PWD/../../install/
 make -j $THREADS
 make install
@@ -129,10 +129,10 @@ cd boost_1_77_0
 cd ..
 
 #R
-wget --no-check-certificate https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz
-tar zxvf R-4.1.1.tar.gz
-rm R-4.1.1.tar.gz
-cd R-4.1.1
+wget --no-check-certificate https://cran.r-project.org/src/base/R-4/R-4.3.1.tar.gz
+tar zxvf R-4.3.1.tar.gz
+rm R-4.3.1.tar.gz
+cd R-4.3.1
 ./configure --prefix=$PWD/../../install/ --libdir=$PWD/../../install/lib/ --without-readline --without-x
 cd src/nmath/standalone/
 make -j $THREADS
